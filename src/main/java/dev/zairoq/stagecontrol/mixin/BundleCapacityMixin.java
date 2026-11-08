@@ -12,16 +12,13 @@ public abstract class BundleCapacityMixin {
             Fraction.getFraction(3, 1);
 
     @Redirect(
-            method = {
-                    "getMaxAmountToAdd",
-                    "getWeightWithAddedItems",
-                    "canInsertNewSlots"
-            },
+            method = "*",
             at = @At(
                     value = "FIELD",
                     target = "Lorg/apache/commons/lang3/math/Fraction;ONE:Lorg/apache/commons/lang3/math/Fraction;",
                     opcode = Opcodes.GETSTATIC
-            )
+            ),
+            require = 1
     )
     private static Fraction stageControl$increaseBundleCapacity() {
         return STAGE_CONTROL$BUNDLE_CAPACITY;
