@@ -3,7 +3,8 @@
   "package": "dev.zairoq.stagecontrol.mixin",
   "compatibilityLevel": "JAVA_25",
   "mixins": [
-    "ServerPlayerMixin"
+    "ServerPlayerMixin",
+    "BundleCapacityMixin"
   ],
   "injectors": {
     "defaultRequire": 1
