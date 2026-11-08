@@ -1,6 +1,6 @@
 # Stage Control
 
-Mod Fabric dedicado al servidor para controlar manualmente el acceso al Nether y al End. No requiere datapack y no modifica el mod Zairoq's Game Enhancements.
+Mod Fabric dedicado al servidor para controlar manualmente el acceso al Nether y al End, y ampliar la capacidad de los bundles. No requiere datapack y no modifica el mod Zairoq's Game Enhancements.
 
 ## Requisitos
 
@@ -29,6 +29,7 @@ Los comandos requieren permiso de moderador. Los jugadores sin permiso reciben e
 - El estado se guarda en `stage-control.properties` dentro de la carpeta del mundo y sobrevive reinicios.
 - Overworld nunca se bloquea.
 - La restricción se aplica en el servidor y no requiere instalar el mod en clientes.
+- Los bundles admiten hasta 3 veces su capacidad vanilla (192 unidades de peso en lugar de 64), conservando el cálculo vanilla de peso y las operaciones normales de inserción/extracción.
 
 ## Compilar
 
@@ -42,4 +43,4 @@ El JAR se genera en `build/libs/`. GitHub Actions ejecuta el mismo build en cada
 
 ## Validación pendiente
 
-La compilación CI debe confirmar las firmas exactas de Minecraft/Fabric 26.3. Después hay que probar en un servidor de pruebas: portales del Nether, portal del End, comandos y permisos, reinicio/persistencia, muerte/respawn, perlas de ender y teletransportes iniciados por otros mods. Un build correcto no sustituye estas pruebas funcionales.
+La compilación CI debe confirmar las firmas exactas de Minecraft/Fabric 26.3. Después hay que probar en un servidor de pruebas: bundles hasta el 100 %, inserción parcial cuando se supera la capacidad, extracción, objetos con distintos tamaños máximos de stack, persistencia en cofres/inventarios y sincronización con clientes vanilla. Un build correcto no sustituye estas pruebas funcionales.
