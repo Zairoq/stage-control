@@ -3,9 +3,9 @@
   "id": "stage_control",
   "version": "${version}",
   "name": "Stage Control",
-  "description": "Manual server-side control for Nether and End progression.",
+  "description": "Controls Nether and End progression and expands bundle capacity.",
   "authors": ["Zairoq"],
-  "environment": "server",
+  "environment": "*",
   "entrypoints": {
     "main": [
       "dev.zairoq.stagecontrol.StageControl"
