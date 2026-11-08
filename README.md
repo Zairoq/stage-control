@@ -43,4 +43,8 @@ El JAR se genera en `build/libs/`. GitHub Actions ejecuta el mismo build en cada
 
 ## Validación pendiente
 
-La compilación CI debe confirmar las firmas exactas de Minecraft/Fabric 26.3. Después hay que probar en un servidor de pruebas: bundles hasta el 100 %, inserción parcial cuando se supera la capacidad, extracción, objetos con distintos tamaños máximos de stack, persistencia en cofres/inventarios y sincronización con clientes vanilla. Un build correcto no sustituye estas pruebas funcionales.
+La compilación CI debe confirmar las firmas exactas de Minecraft/Fabric 26.3. Después hay que probar en un servidor de pruebas:
+- Portales del Nether y del End, comandos, permisos, reinicio/persistencia, muerte/respawn, perlas de ender y teletransportes iniciados por otros mods.
+- Bundles hasta el 100 %, inserción parcial al superar la capacidad, extracción, objetos con distintos tamaños máximos de stack y persistencia en cofres/inventarios.
+
+Un build correcto no sustituye estas pruebas funcionales. El cliente vanilla conserva la interfaz estándar del bundle; su barra de progreso puede marcarlo como lleno al alcanzar el peso vanilla, aunque el servidor todavía permita insertar más objetos.
