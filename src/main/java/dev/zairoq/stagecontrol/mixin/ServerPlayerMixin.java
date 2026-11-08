@@ -19,7 +19,7 @@ public abstract class ServerPlayerMixin {
             return;
         }
         if (StageControl.isLocked(transition.newLevel().dimension())) {
-            player.sendSystemMessage(Component.literal("tengan paciencia :)"), false);
+            player.sendSystemMessage(Component.literal("Dimension Bloqueada"), true);
             cir.setReturnValue(player);
         }
     }
