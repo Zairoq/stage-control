@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "stage_control",
+  "version": "${version}",
+  "name": "Stage Control",
+  "description": "Manual server-side control for Nether and End progression.",
+  "authors": ["Zairoq"],
+  "environment": "server",
+  "entrypoints": {
+    "main": [
+      "dev.zairoq.stagecontrol.StageControl"
+    ]
+  },
+  "mixins": [
+    "stage_control.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.19.5",
+    "minecraft": "26.3",
+    "java": ">=25",
+    "fabric-api": ">=0.163.0+26.3"
+  }
+}
